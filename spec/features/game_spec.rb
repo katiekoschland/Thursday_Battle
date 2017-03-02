@@ -6,8 +6,24 @@ describe Game do
 describe '#attack' do
   it 'damages the player' do
     expect(player_2).to receive(:receive_damage)
-    game = Game.new(player_1)
+    game = Game.new(player_1,player_2)
     game.attack(player_2)
   end
 end
+
+describe '#player_1' do
+  it 'retrieves the first player' do
+    game = Game.new(player_1,player_2)
+    expect(game.player_1).to eq player_1
+  end
+end
+
+describe '#player_2' do
+  it 'retrieves the second player' do
+    game = Game.new(player_1,player_2)
+    expect(game.player_2).to eq player_2
+  end
+end
+
+
 end
