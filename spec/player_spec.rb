@@ -20,7 +20,8 @@ describe Player do
   describe '#attack' do
     it 'damages the player' do
       expect(katie).to receive(:receive_damage)
-      bernard.attack(katie)
+      game = Game.new(bernard)
+      game.attack(katie)
     end
   end
 

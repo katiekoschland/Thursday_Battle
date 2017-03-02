@@ -1,5 +1,6 @@
 require 'spec_helper'
 require 'player'
+require 'game'
 
 feature 'attack and confirm' do
   scenario 'attack and confirm' do
